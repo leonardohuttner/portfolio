@@ -1,17 +1,740 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    >
-  </q-page>
+  <q-layout view="lHh Lpr lFf">
+    <!-- Navbar fixa -->
+    <q-header elevated class="bg-white text-grey-9">
+      <q-toolbar class="q-px-xl">
+        <q-toolbar-title class="text-weight-medium">
+          <span class="text-green">i'm</span> Leonardo
+        </q-toolbar-title>
+        <q-btn flat label="Início" @click="scrollTo('hero')" />
+        <q-btn flat label="Sobre" @click="scrollTo('about')" />
+        <q-btn flat label="IA" @click="scrollTo('ai')" />
+        <q-btn flat label="Projetos" @click="scrollTo('projects')" />
+        <q-btn flat label="Linha do tempo" @click="scrollTo('timeline')" />
+        <q-btn flat label="Contato" @click="scrollTo('contact')" />
+        <q-btn flat label="Newsletter" @click="scrollTo('newsletter')" />
+      </q-toolbar>
+    </q-header>
+
+    <q-page-container>
+      <!-- Hero -->
+      <section
+        id="hero"
+        class="section-slide flex flex-center contact-gradient"
+      >
+        <div class="row items-center q-col-gutter-xl max-w-screen-lg">
+          <div class="col-12 col-md-6 text-center text-md-left">
+            <h1 class="text-h2 text-weight-bold text-grey-9 q-mb-md">
+              Desenvolvedor Fullstack <br />
+            </h1>
+            <p class="text-body1 text-grey-8 q-mb-lg">
+              👋 Sou Leonardo — desenvolvedor fullstack com experiência em
+              integrações, APIs e aplicações web. Gosto de música, violão,
+              guitarra, baixo, criptomoedas e economia.
+            </p>
+            <div class="row q-col-gutter-lg justify-center justify-md-start">
+              <div class="col-6">
+                <p class="text-subtitle1 text-weight-medium">Atual</p>
+                <p class="text-body2">Desenvolvedor SR / Grupo Lins Ferrão</p>
+              </div>
+              <div class="col-6">
+                <p class="text-subtitle1 text-weight-medium">Atual</p>
+                <p class="text-body2">Professor / Senac</p>
+              </div>
+              <div class="col-12">
+                <p class="text-subtitle1 text-weight-medium">Localização</p>
+                <p class="text-body2">Camaquã, Rio Grande do Sul · Brasil</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 flex flex-center q-mt-md">
+            <q-img
+              src="./../assets/perfil.png"
+              alt="Foto Leonardo"
+              class="rounded-borders"
+              style="max-width: 300px; border-radius: 24px"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre mim -->
+      <section
+        id="about"
+        class="section-slide contact-gradient-inverse flex flex-center"
+      >
+        <div class="max-w-screen-md q-mx-auto text-center">
+          <h2 class="text-h4 text-grey-9 q-mb-md">Sobre mim</h2>
+          <p class="text-body1 text-grey-8 q-mb-xl">
+            Formado em Análise e Desenvolvimento de Sistemas, pós-graduado em
+            Docência para Ensino Técnico e atualmente pós-graduando em Ciência
+            de Dados e Inteligência Artificial (previsão jan/26). <br />
+            Trabalho principalmente com Python, Docker e frontend em VueJS.
+            Atualmente atuo no setor de NFs e integrações de estoque com filas.
+          </p>
+
+          <div class="row q-col-gutter-lg justify-center q-gutter-x-sm">
+            <q-card class="col-12 col-md-3 card-slide">
+              <q-card-section>
+                <q-icon name="person" size="36px" color="primary" />
+                <p class="q-mt-sm text-body2">
+                  Analise e Desenvolvimento de sistemas
+                </p>
+              </q-card-section>
+            </q-card>
+            <q-card class="col-12 col-md-3 card-slide">
+              <q-card-section>
+                <q-icon name="analytics" size="36px" color="teal" />
+                <p class="q-mt-sm text-body2">
+                  Pós em docencia ensino tecnico, ciencia de dados e IA
+                </p>
+              </q-card-section>
+            </q-card>
+            <q-card class="col-12 col-md-3 card-slide">
+              <q-card-section>
+                <q-icon name="autorenew" size="36px" color="deep-orange" />
+                <p class="q-mt-sm text-body2">Aprendizado continuo</p>
+              </q-card-section>
+            </q-card>
+          </div>
+        </div>
+      </section>
+
+      <section id="ai" class="section-slide contact-gradient flex flex-center">
+        <div class="max-w-screen-lg q-mx-auto text-center">
+          <h2 class="text-h4 text-grey-9 q-mb-lg">
+            Inteligência Artificial & Dados
+          </h2>
+          <p class="text-body1 text-grey-8 q-mb-xl">
+            Inteligência Artificial é uma das áreas mais promissoras para
+            transformar dados em valor. Mesmo que eu ainda não desenvolva
+            soluções comerciais, acredito no impacto que ela pode trazer:
+          </p>
+          <div class="row q-col-gutter-lg justify-center q-gutter-x-sm">
+            <q-card class="col-12 col-md-3 card-slide">
+              <q-card-section>
+                <q-icon name="storage" size="36px" color="primary" />
+                <p class="q-mt-sm text-body2">Aprender com dados</p>
+              </q-card-section>
+            </q-card>
+            <q-card class="col-12 col-md-3 card-slide">
+              <q-card-section>
+                <q-icon name="analytics" size="36px" color="teal" />
+                <p class="q-mt-sm text-body2">Apoiar decisões</p>
+              </q-card-section>
+            </q-card>
+            <q-card class="col-12 col-md-3 card-slide">
+              <q-card-section>
+                <q-icon name="autorenew" size="36px" color="deep-orange" />
+                <p class="q-mt-sm text-body2">Automatizar tarefas</p>
+              </q-card-section>
+            </q-card>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projetos -->
+      <section
+        id="projects"
+        class="section-slide contact-gradient-inverse flex flex-center"
+      >
+        <div class="max-w-screen-lg q-mx-auto text-center">
+          <h2 class="text-h4 text-grey-9 q-mb-xl">Projetos & Ferramentas</h2>
+          <div
+            class="row q-col-gutter-lg justify-center q-gutter-x-sm q-gutter-y-sm"
+          >
+            <q-card class="col-12 col-md-5 card-slide">
+              <q-card-section>
+                <q-icon name="local_shipping" size="36px" color="primary" />
+                <h3 class="text-subtitle1 q-mt-md">CapivaraTracker</h3>
+                <p class="text-body2 text-grey-8">
+                  Rastreamento de encomendas via API dos Correios (obsoleto).
+                </p>
+              </q-card-section>
+              <q-card-actions align="center">
+                <q-btn outline label="Conhecer" color="primary" />
+              </q-card-actions>
+            </q-card>
+
+            <q-card class="col-12 col-md-5 card-slide">
+              <q-card-section>
+                <q-icon
+                  name="account_balance_wallet"
+                  size="36px"
+                  color="green"
+                />
+                <h3 class="text-subtitle1 q-mt-md">App de Finanças</h3>
+                <p class="text-body2 text-grey-8">
+                  Controle completo de investimentos, contas, metas, faturas e
+                  criptos.
+                </p>
+              </q-card-section>
+              <q-card-actions align="center">
+                <q-btn outline label="Conhecer" color="green" />
+              </q-card-actions>
+            </q-card>
+
+            <q-card class="col-12 col-md-5 card-slide">
+              <q-card-section>
+                <q-icon name="currency_bitcoin" size="36px" color="orange" />
+                <h3 class="text-subtitle1 q-mt-md">App de Criptomoedas</h3>
+                <p class="text-body2 text-grey-8">
+                  Site para monitorar carteiras, transações e preços em tempo
+                  real.
+                </p>
+              </q-card-section>
+              <q-card-actions align="center">
+                <q-btn outline label="Conhecer" color="orange" />
+              </q-card-actions>
+            </q-card>
+
+            <q-card class="col-12 col-md-5 card-slide">
+              <q-card-section>
+                <q-icon name="cloud" size="36px" color="blue" />
+                <h3 class="text-subtitle1 q-mt-md">Over-engineering</h3>
+                <p class="text-body2 text-grey-8">
+                  VPS Oracle com Docker usando N8N, agentes de IA e nuvem
+                  própria.
+                </p>
+              </q-card-section>
+              <q-card-actions align="center">
+                <q-btn outline label="Conhecer" color="blue" />
+              </q-card-actions>
+            </q-card>
+          </div>
+        </div>
+      </section>
+
+      <!-- Linha do Tempo -->
+      <section
+        id="timeline"
+        class="section-slide contact-gradient flex flex-center"
+      >
+        <div class="max-w-screen-md q-mx-auto text-center">
+          <h2 class="text-h4 text-grey-9 q-mb-xl">
+            Linha do Tempo Profissional
+          </h2>
+          <q-timeline layout="comfortable" color="primary">
+            <q-timeline-entry
+              color="teal"
+              title="Professor - Senac RS"
+              subtitle="abr 2025 - atual"
+            >
+              <q-card flat bordered class="text-grey-8">
+                <q-card-section class="text-body2">
+                  Técnico em informática | Redes | Desenvolvimento Web
+                </q-card-section>
+              </q-card>
+            </q-timeline-entry>
+
+            <q-timeline-entry
+              color="blue"
+              title="Desenvolvedor SR - Grupo Lins Ferrão"
+              subtitle="jan 2024 - atual"
+            >
+              <q-card flat bordered class="text-grey-8">
+                <q-card-section class="text-body2">
+                  Desenvolvimento de integrações, APIs e aplicações web.
+                </q-card-section>
+              </q-card>
+            </q-timeline-entry>
+
+            <q-timeline-entry
+              color="indigo"
+              title="Desenvolvedor Pl - Grupo Lins Ferrão"
+              subtitle="fev 2023 - jan 2025"
+            >
+              <q-card flat bordered class="text-grey-8">
+                <q-card-section class="text-body2">
+                  Projetos em VueJS, APIs Python e banco de dados MySQL.
+                </q-card-section>
+              </q-card>
+            </q-timeline-entry>
+
+            <q-timeline-entry
+              color="purple"
+              title="Desenvolvedor Jr - Grupo Lins Ferrão"
+              subtitle="jul 2021 - mar 2023"
+            >
+              <q-card flat bordered class="text-grey-8">
+                <q-card-section class="text-body2">
+                  Desenvolvimento frontend em VueJS e apoio em APIs
+                  Flask/Django.
+                </q-card-section>
+              </q-card>
+            </q-timeline-entry>
+
+            <q-timeline-entry
+              color="deep-orange"
+              title="Técnico de TI - 3º Batalhão Logístico"
+              subtitle="fev 2018 - jan 2019"
+            >
+              <q-card flat bordered class="text-grey-8">
+                <q-card-section class="text-body2">
+                  Suporte técnico e manutenção de equipamentos.
+                </q-card-section>
+              </q-card>
+            </q-timeline-entry>
+
+            <q-timeline-entry
+              color="red"
+              title="Suporte - RBN Tecnologia"
+              subtitle="nov 2016 - fev 2018"
+            >
+              <q-card flat bordered class="text-grey-8">
+                <q-card-section class="text-body2">
+                  Suporte em TI e manutenção de sistemas para clientes locais.
+                </q-card-section>
+              </q-card>
+            </q-timeline-entry>
+          </q-timeline>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section
+        id="contact"
+        class="section-slide contact-gradient-inverse flex flex-center"
+      >
+        <div class="max-w-screen-md q-pa-md">
+          <q-card class="q-pa-xl card-contact q-mx-auto">
+            <div class="text-center q-mb-lg">
+              <h2 class="text-h4 text-grey-9 q-mb-sm">Entre em Contato</h2>
+              <p class="text-body2 text-grey-7">
+                Ficarei feliz em responder sua mensagem 👇
+              </p>
+            </div>
+            <q-form @submit="sendMessage" class="q-gutter-md">
+              <q-input
+                outlined
+                v-model="form.name"
+                label="Nome"
+                dense
+                clearable
+              >
+                <template v-slot:prepend>
+                  <q-icon name="person" color="primary" />
+                </template>
+              </q-input>
+              <q-input
+                outlined
+                v-model="form.email"
+                label="Email"
+                type="email"
+                dense
+                clearable
+              >
+                <template v-slot:prepend>
+                  <q-icon name="email" color="primary" />
+                </template>
+              </q-input>
+              <q-input
+                outlined
+                v-model="form.message"
+                label="Mensagem"
+                type="textarea"
+                autogrow
+              />
+              <div class="text-center q-mt-md">
+                <q-btn
+                  label="Enviar"
+                  color="primary"
+                  type="submit"
+                  class="q-px-lg q-py-sm"
+                  rounded
+                  unelevated
+                />
+              </div>
+            </q-form>
+          </q-card>
+        </div>
+      </section>
+
+      <!-- Newsletter -->
+      <section
+        id="newsletter"
+        class="section-slide contact-gradient flex flex-center"
+      >
+        <div class="max-w-screen-md q-pa-md text-center">
+          <q-icon
+            name="mdi-newspaper-variant-outline"
+            size="48px"
+            color="primary"
+          />
+          <h2 class="text-h5 text-grey-9 q-mt-md">Newsletter Inteligente</h2>
+          <p class="text-body1 text-grey-7 q-mt-sm">
+            Uma IA lê notícias sobre
+            <b>economia, bitcoin, blockchain e tecnologia</b>, gera um resumo e
+            envia direto para seu email <b>todos os dias às 8h da manhã</b>.
+          </p>
+          <q-form
+            @submit="subscribeNewsletter"
+            class="q-gutter-md q-mt-lg max-w-screen-sm q-mx-auto"
+          >
+            <q-input
+              outlined
+              v-model="newsletter.name"
+              label="Nome"
+              dense
+              clearable
+            >
+              <template v-slot:prepend>
+                <q-icon name="person" color="primary" />
+              </template>
+            </q-input>
+            <q-input
+              outlined
+              v-model="newsletter.email"
+              label="Email"
+              type="email"
+              dense
+              clearable
+            >
+              <template v-slot:prepend>
+                <q-icon name="email" color="primary" />
+              </template>
+            </q-input>
+            <div class="text-center q-mt-md">
+              <q-btn
+                label="Quero Receber"
+                color="primary"
+                type="submit"
+                class="q-px-lg q-py-sm"
+                rounded
+                unelevated
+              />
+            </div>
+          </q-form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-grey-9 text-white q-pa-md text-center">
+        <p class="q-mb-sm">© 2025 Desenvolvido por Leonardo</p>
+        <div class="row justify-center q-gutter-md">
+          <q-btn
+            flat
+            round
+            color="white"
+            icon="mdi-github"
+            href="https://github.com/seuusuario"
+            target="_blank"
+          />
+          <q-btn
+            flat
+            round
+            color="white"
+            icon="mdi-linkedin"
+            href="https://linkedin.com/in/seuusuario"
+            target="_blank"
+          />
+          <q-btn
+            flat
+            round
+            color="white"
+            icon="mdi-email"
+            href="mailto:seuemail@gmail.com"
+          />
+        </div>
+      </footer>
+    </q-page-container>
+  </q-layout>
 </template>
 
-<script>
-import { defineComponent } from 'vue'
+<script setup>
+import { ref } from "vue";
 
-export default defineComponent({
-  name: 'IndexPage'
-})
+const form = ref({
+  name: "",
+  email: "",
+  message: "",
+});
+
+const newsletter = ref({
+  name: "",
+  email: "",
+});
+
+const sendMessage = () => {
+  console.log("Form enviado:", form.value);
+  alert("Mensagem enviada! 🚀 (aqui tu pode integrar com backend/email)");
+};
+
+const subscribeNewsletter = () => {
+  console.log("Newsletter:", newsletter.value);
+  alert("Inscrição confirmada! 🚀 Você começará a receber os resumos às 8h.");
+};
+
+const scrollTo = (id) => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+};
 </script>
+
+<style scoped>
+:root {
+  --bg: #fff6f4; /* tom rosado/pálido */
+  --text: #2b2726; /* tom carvão */
+  --muted: #7a7676;
+  --card: #fff;
+}
+
+.portfolio-page {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: transparent;
+  padding: 12px 0;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.nav a {
+  margin-left: 18px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  opacity: 0.9;
+}
+.nav a:hover {
+  opacity: 1;
+}
+
+/* HERO */
+.hero {
+  padding-top: 56px;
+}
+.hero-title {
+  font-weight: 800;
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  line-height: 0.95;
+  margin: 0;
+}
+.hero-accent {
+  display: block;
+  color: var(--text);
+  opacity: 0.98;
+}
+.hero-sub {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+.hero-meta .meta-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.meta-desc {
+  color: var(--muted);
+}
+
+.hero-image .image-mask {
+  display: flex;
+  justify-content: flex-end;
+}
+.hero-image img {
+  width: 420px;
+  max-width: 96%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 120px 24px 120px 24px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+}
+
+.section {
+  margin-top: 36px;
+}
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.lead {
+  color: var(--muted);
+  font-size: 1rem;
+}
+.profile-card {
+  border-radius: 12px;
+  background: var(--card);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* IA */
+.section-ia .ia-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ia-box {
+  border-radius: 18px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  color: var(--text);
+  font-weight: 600;
+}
+.ia-list {
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+.project-card {
+  background: transparent;
+  border-radius: 18px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.project-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.project-desc {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tool {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding: 24px 0;
+}
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.02));
+}
+.timeline-items {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.timeline-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.timeline-item.left {
+  justify-content: flex-start;
+}
+.timeline-card {
+  max-width: 520px;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 16px 18px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+}
+.timeline-date {
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.timeline-title {
+  font-weight: 700;
+}
+.timeline-sub {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+.timeline-desc {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.section-slide {
+  min-height: 100vh;
+  padding: 60px 20px;
+}
+.card-slide {
+  border-radius: 18px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+.max-w-screen-md {
+  max-width: 800px;
+}
+.max-w-screen-lg {
+  max-width: 1100px;
+}
+
+/* Footer */
+.footer {
+  background: transparent;
+}
+
+/* Smooth scroll global */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsiveness tweaks */
+@media (max-width: 900px) {
+  .timeline-line {
+    left: 8%;
+    transform: none;
+  }
+  .timeline-item {
+    justify-content: flex-start;
+  }
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .hero-image img {
+    width: 280px;
+  }
+}
+.contact-gradient {
+  background: linear-gradient(135deg, #f0f4ff, #fef6f9);
+}
+
+.contact-gradient-inverse {
+  background: linear-gradient(135deg, #f6fef6, #f0f4ff);
+}
+
+.card-contact,
+.card-newsletter {
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+</style>
