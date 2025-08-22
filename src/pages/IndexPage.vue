@@ -12,7 +12,7 @@
         <q-btn flat label="Projetos" @click="scrollTo('projects')" />
         <q-btn flat label="Linha do tempo" @click="scrollTo('timeline')" />
         <q-btn flat label="Contato" @click="scrollTo('contact')" />
-        <q-btn flat label="Newsletter" @click="scrollTo('newsletter')" />
+        <q-btn flat label="Newsletter" @click="showNewsletter = true" />
       </q-toolbar>
     </q-header>
 
@@ -27,9 +27,9 @@
             <h1 class="text-h2 text-weight-bold text-grey-9 q-mb-md">
               Desenvolvedor Fullstack <br />
             </h1>
-            <p class="text-body1 text-grey-8 q-mb-lg">
+            <p class="text-body1 text-grey-9 q-mb-lg">
               👋 Sou Leonardo — desenvolvedor fullstack com experiência em
-              integrações, APIs e aplicações web. Gosto de música,programar,
+              integrações, APIs e aplicações web. Gosto de música, programar,
               criptomoedas, economia e me aventuro com alguns instrumentos.
             </p>
             <div
@@ -44,10 +44,10 @@
                 <p class="text-body2">Professor TI / Senac</p>
               </q-card>
               <div class="col-12">
-                <p class="text-subtitle1 text-weight-medium">
+                <p class="text-subtitle1 text-grey-9 text-weight-medium">
                   <q-icon name="place" />Localização
                 </p>
-                <p class="text-body2">Camaquã, Rio Grande do Sul · Brasil</p>
+                <p class="text-body1 text-grey-9">Rio Grande do Sul · Brasil</p>
               </div>
             </div>
           </div>
@@ -68,8 +68,14 @@
         class="section-slide contact-gradient-inverse flex flex-center"
       >
         <div class="max-w-screen-md q-mx-auto text-center">
+          <q-img
+            src="./../assets/perfil.png"
+            alt="Foto Leonardo"
+            class="rounded-borders"
+            style="max-width: 300px; border-radius: 24px"
+          />
           <h2 class="text-h4 text-grey-9 q-mb-md">Sobre mim</h2>
-          <p class="text-body1 text-grey-8 q-mb-xl">
+          <p class="text-body1 text-grey-9 q-mb-xl">
             Formado em Análise e Desenvolvimento de Sistemas, pós-graduado em
             Docência para Ensino Técnico e atualmente pós-graduando em Ciência
             de Dados e Inteligência Artificial (previsão jan/26). <br />
@@ -110,7 +116,7 @@
           <h2 class="text-h4 text-grey-9 q-mb-lg">
             Inteligência Artificial & Dados
           </h2>
-          <p class="text-body1 text-grey-8 q-mb-xl">
+          <p class="text-body1 text-grey-9 q-mb-xl">
             Inteligência Artificial é uma das áreas mais promissoras para
             transformar dados em valor, tanto para voce quanto sua empresa.
             Acredito no impacto que ela pode trazer:
@@ -152,10 +158,12 @@
               <q-card-section>
                 <q-icon name="local_shipping" size="36px" color="primary" />
                 <h3 class="text-subtitle1 q-mt-md">CapivaraTracker</h3>
-                <p class="text-body2 text-grey-8">
+                <p class="text-body2 text-grey-9">
                   Rastreamento de encomendas via API dos Correios/Melhor envio.
-                  Como os correios ainda não tinha app e eu gostava de monitorar e validar minhas encomendas surgiu 
-                  esse projeto, porem hoje ja obsoleto por que a api foi desligada desde o lançamento proprio dos correios).
+                  Como os correios ainda não tinha app e eu gostava de monitorar
+                  e validar minhas encomendas surgiu esse projeto, porem hoje ja
+                  obsoleto por que a api foi desligada desde o lançamento
+                  proprio dos correios).
                 </p>
               </q-card-section>
               <q-card-actions align="center">
@@ -176,7 +184,7 @@
                   color="green"
                 />
                 <h3 class="text-subtitle1 q-mt-md">App de Finanças</h3>
-                <p class="text-body2 text-grey-8">
+                <p class="text-body2 text-grey-9">
                   Controle completo de investimentos, contas, metas, faturas e
                   criptos. (Andamento - Ja é possivel ser usuario tester)
                 </p>
@@ -195,7 +203,7 @@
               <q-card-section>
                 <q-icon name="currency_bitcoin" size="36px" color="orange" />
                 <h3 class="text-subtitle1 q-mt-md">App de Criptomoedas</h3>
-                <p class="text-body2 text-grey-8">
+                <p class="text-body2 text-grey-9">
                   Site para monitorar carteiras, transações e preços em tempo
                   real. (Andamento)
                 </p>
@@ -212,9 +220,9 @@
 
             <q-card class="col-12 col-md-5 card-slide">
               <q-card-section>
-                <q-icon name="phone" size="36px" color="blue" />
+                <q-icon name="phone" size="36px" color="deep-orange-7" />
                 <h3 class="text-subtitle1 q-mt-md">Contatos</h3>
-                <p class="text-body2 text-grey-8">
+                <p class="text-body2 text-grey-9">
                   Site de links uteis para uma loja
                 </p>
               </q-card-section>
@@ -230,8 +238,25 @@
 
             <q-card class="col-12 col-md-5 card-slide">
               <q-card-section>
+                <q-icon name="bolt" size="36px" color="green" />
+                <h3 class="text-subtitle1 q-mt-md">
+                  Desenvolvimento de automações no-code
+                </h3>
+                <p class="text-body2 text-grey-9">
+                  Desenvolvimento com fluxos e agentes de IA rapido.
+                </p>
+              </q-card-section>
+              <!-- <q-card-actions align="center">
+                <q-btn outline label="Conhecer" color="blue" />
+              </q-card-actions> -->
+            </q-card>
+
+            <q-card class="col-12 col-md-5 card-slide">
+              <q-card-section>
                 <q-icon name="cloud" size="36px" color="blue" />
-                <h3 class="text-subtitle1 q-mt-md">Over-engineering for study</h3>
+                <h3 class="text-subtitle1 q-mt-md">
+                  Over-engineering for study
+                </h3>
                 <p class="text-body2 text-grey-8">
                   VPS Oracle com Docker usando N8N, agentes de IA e nuvem
                   própria para estudos.
@@ -286,7 +311,7 @@
       </section>
 
       <!-- Newsletter -->
-      <section
+      <!-- <section
         id="newsletter"
         class="section-slide contact-gradient flex flex-center"
       >
@@ -296,7 +321,7 @@
           width="100%"
           height="600px"
         ></iframe>
-      </section>
+      </section> -->
 
       <!-- Footer -->
       <footer class="bg-grey-9 text-white q-pa-md text-center">
@@ -327,23 +352,37 @@
           />
         </div>
       </footer>
+
+      <!-- Modal Newsletter -->
+      <q-dialog v-model="showNewsletter" persistent>
+        <q-card>
+          <q-card-section class="row items-center justify-between">
+            <div class="text-h6">Newsletter</div>
+            <q-btn flat round dense icon="close" v-close-popup />
+          </q-card-section>
+
+          <q-card-section>
+            <iframe
+              src="https://n8n-oracle.leonardohuttner.com.br/form/newsletter"
+              frameborder="0"
+              width="500px"
+              height="600px"
+            ></iframe>
+          </q-card-section>
+        </q-card>
+      </q-dialog>
     </q-page-container>
   </q-layout>
 </template>
 
 <script setup>
 import { openURL } from "quasar";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
-const form = ref({
-  name: "",
-  email: "",
-  message: "",
-});
+const showNewsletter = ref(false);
 
-const newsletter = ref({
-  name: "",
-  email: "",
+onMounted(() => {
+  showNewsletter.value = true;
 });
 
 const linhaTempo = ref([
@@ -387,16 +426,6 @@ const linhaTempo = ref([
       "Suporte em TI e manutenção de sistemas para empresas. Servidores linux,computadores, rede e AD",
   },
 ]);
-
-const sendMessage = () => {
-  console.log("Form enviado:", form.value);
-  alert("Mensagem enviada! 🚀 (aqui tu pode integrar com backend/email)");
-};
-
-const subscribeNewsletter = () => {
-  console.log("Newsletter:", newsletter.value);
-  alert("Inscrição confirmada! 🚀 Você começará a receber os resumos às 8h.");
-};
 
 const scrollTo = (id) => {
   const el = document.getElementById(id);
@@ -658,13 +687,12 @@ html {
   }
 }
 .contact-gradient {
-  background: linear-gradient(135deg, #f0f4ff, #fef6f9);
+  background: linear-gradient(135deg, #d6dae2, #efe5e5);
 }
 
 .contact-gradient-inverse {
-  background: linear-gradient(135deg, #f6fef6, #f0f4ff);
+  background: linear-gradient(135deg, #d3ded3, #f0f4ff);
 }
-
 .card-contact,
 .card-newsletter {
   border-radius: 20px;
