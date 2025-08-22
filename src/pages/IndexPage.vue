@@ -157,7 +157,12 @@
                 </p>
               </q-card-section>
               <q-card-actions align="center">
-                <q-btn outline label="Conhecer" color="primary" />
+                <q-btn
+                  outline
+                  label="Conhecer"
+                  color="primary"
+                  @click="openURL('https://capivara-tracker.vercel.app/')"
+                />
               </q-card-actions>
             </q-card>
 
@@ -175,7 +180,12 @@
                 </p>
               </q-card-section>
               <q-card-actions align="center">
-                <q-btn outline label="Conhecer" color="green" />
+                <q-btn
+                  outline
+                  label="Conhecer"
+                  color="green"
+                  @click="openURL('https://bills.leonardohuttner.com.br/')"
+                />
               </q-card-actions>
             </q-card>
 
@@ -189,7 +199,30 @@
                 </p>
               </q-card-section>
               <q-card-actions align="center">
-                <q-btn outline label="Conhecer" color="orange" />
+                <q-btn
+                  outline
+                  label="Conhecer"
+                  color="orange"
+                  @click="openURL('https://block-info.vercel.app/')"
+                />
+              </q-card-actions>
+            </q-card>
+
+            <q-card class="col-12 col-md-5 card-slide">
+              <q-card-section>
+                <q-icon name="phone" size="36px" color="blue" />
+                <h3 class="text-subtitle1 q-mt-md">Contatos</h3>
+                <p class="text-body2 text-grey-8">
+                  Site de links uteis para uma loja
+                </p>
+              </q-card-section>
+              <q-card-actions align="center">
+                <q-btn
+                  outline
+                  label="Conhecer"
+                  color="blue"
+                  @click="openURL('https://contato.territoriocamaqua.com.br/')"
+                />
               </q-card-actions>
             </q-card>
 
@@ -199,7 +232,7 @@
                 <h3 class="text-subtitle1 q-mt-md">Over-engineering</h3>
                 <p class="text-body2 text-grey-8">
                   VPS Oracle com Docker usando N8N, agentes de IA e nuvem
-                  própria.
+                  própria para estudos.
                 </p>
               </q-card-section>
               <q-card-actions align="center">
@@ -388,6 +421,7 @@
 </template>
 
 <script setup>
+import { openURL } from "quasar";
 import { ref } from "vue";
 
 const form = ref({
