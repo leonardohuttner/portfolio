@@ -271,63 +271,17 @@
       </section>
 
       <!-- Contato -->
-      <!-- <section
+      <section
         id="contact"
         class="section-slide contact-gradient-inverse flex flex-center"
       >
-        <div class="max-w-screen-md q-pa-md">
-          <q-card class="q-pa-xl card-contact q-mx-auto">
-            <div class="text-center q-mb-lg">
-              <h2 class="text-h4 text-grey-9 q-mb-sm">Entre em Contato</h2>
-              <p class="text-body2 text-grey-7">
-                Ficarei feliz em responder sua mensagem 👇
-              </p>
-            </div>
-            <q-form @submit="sendMessage" class="q-gutter-md">
-              <q-input
-                outlined
-                v-model="form.name"
-                label="Nome"
-                dense
-                clearable
-              >
-                <template v-slot:prepend>
-                  <q-icon name="person" color="primary" />
-                </template>
-              </q-input>
-              <q-input
-                outlined
-                v-model="form.email"
-                label="Email"
-                type="email"
-                dense
-                clearable
-              >
-                <template v-slot:prepend>
-                  <q-icon name="email" color="primary" />
-                </template>
-              </q-input>
-              <q-input
-                outlined
-                v-model="form.message"
-                label="Mensagem"
-                type="textarea"
-                autogrow
-              />
-              <div class="text-center q-mt-md">
-                <q-btn
-                  label="Enviar"
-                  color="primary"
-                  type="submit"
-                  class="q-px-lg q-py-sm"
-                  rounded
-                  unelevated
-                />
-              </div>
-            </q-form>
-          </q-card>
-        </div>
-      </section> -->
+        <iframe
+          src="https://n8n-oracle.leonardohuttner.com.br/form/contato"
+          frameborder="0"
+          width="100%"
+          height="500px"
+        ></iframe>
+      </section>
 
       <!-- Newsletter -->
       <section
@@ -335,7 +289,7 @@
         class="section-slide contact-gradient flex flex-center"
       >
         <iframe
-          src="https://n8n-oracle.leonardohuttner.com.br/form/contato"
+          src="https://n8n-oracle.leonardohuttner.com.br/form/newsletter"
           frameborder="0"
           width="100%"
           height="500px"
