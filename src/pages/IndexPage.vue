@@ -220,19 +220,19 @@
             Linha do Tempo Profissional
           </h2>
           <q-timeline layout="comfortable" color="primary">
-            <section v-for="tempo in linhaTempo" :key="tempo.color">
-              <q-timeline-entry
-                :color="tempo.color"
-                :title="tempo.title"
-                :subtitle="tempo.subtitle"
-              >
-                <q-card flat bordered class="text-grey-8">
-                  <q-card-section class="text-body2">
-                    {{ tempo.subtitle2 }}
-                  </q-card-section>
-                </q-card>
-              </q-timeline-entry>
-            </section>
+            <q-timeline-entry
+              :color="tempo.color"
+              :title="tempo.title"
+              :subtitle="tempo.subtitle"
+              v-for="tempo in linhaTempo"
+              :key="tempo.color"
+            >
+              <q-card flat bordered class="text-grey-8">
+                <q-card-section class="text-body2">
+                  {{ tempo.subtitle2 }}
+                </q-card-section>
+              </q-card>
+            </q-timeline-entry>
           </q-timeline>
         </div>
       </section>
@@ -438,7 +438,8 @@ const linhaTempo = ref([
     color: "red",
     title: "Suporte - RBN Tecnologia",
     subtitle: "nov 2016 - fev 2018",
-    subtitle2: "Suporte em TI e manutenção de sistemas para clientes locais.",
+    subtitle2:
+      "Suporte em TI e manutenção de sistemas para empresas. Servidores linux,computadores, rede e AD",
   },
 ]);
 
