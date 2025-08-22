@@ -153,7 +153,9 @@
                 <q-icon name="local_shipping" size="36px" color="primary" />
                 <h3 class="text-subtitle1 q-mt-md">CapivaraTracker</h3>
                 <p class="text-body2 text-grey-8">
-                  Rastreamento de encomendas via API dos Correios (obsoleto).
+                  Rastreamento de encomendas via API dos Correios/Melhor envio.
+                  Como os correios ainda não tinha app e eu gostava de monitorar e validar minhas encomendas surgiu 
+                  esse projeto, porem hoje ja obsoleto por que a api foi desligada desde o lançamento proprio dos correios).
                 </p>
               </q-card-section>
               <q-card-actions align="center">
@@ -176,7 +178,7 @@
                 <h3 class="text-subtitle1 q-mt-md">App de Finanças</h3>
                 <p class="text-body2 text-grey-8">
                   Controle completo de investimentos, contas, metas, faturas e
-                  criptos.
+                  criptos. (Andamento - Ja é possivel ser usuario tester)
                 </p>
               </q-card-section>
               <q-card-actions align="center">
@@ -195,7 +197,7 @@
                 <h3 class="text-subtitle1 q-mt-md">App de Criptomoedas</h3>
                 <p class="text-body2 text-grey-8">
                   Site para monitorar carteiras, transações e preços em tempo
-                  real.
+                  real. (Andamento)
                 </p>
               </q-card-section>
               <q-card-actions align="center">
@@ -229,15 +231,15 @@
             <q-card class="col-12 col-md-5 card-slide">
               <q-card-section>
                 <q-icon name="cloud" size="36px" color="blue" />
-                <h3 class="text-subtitle1 q-mt-md">Over-engineering</h3>
+                <h3 class="text-subtitle1 q-mt-md">Over-engineering for study</h3>
                 <p class="text-body2 text-grey-8">
                   VPS Oracle com Docker usando N8N, agentes de IA e nuvem
                   própria para estudos.
                 </p>
               </q-card-section>
-              <q-card-actions align="center">
+              <!-- <q-card-actions align="center">
                 <q-btn outline label="Conhecer" color="blue" />
-              </q-card-actions>
+              </q-card-actions> -->
             </q-card>
           </div>
         </div>
