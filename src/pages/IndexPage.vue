@@ -29,20 +29,24 @@
             </h1>
             <p class="text-body1 text-grey-8 q-mb-lg">
               👋 Sou Leonardo — desenvolvedor fullstack com experiência em
-              integrações, APIs e aplicações web. Gosto de música, violão,
-              guitarra, baixo, criptomoedas e economia.
+              integrações, APIs e aplicações web. Gosto de música,programar,
+              criptomoedas, economia e me aventuro com alguns instrumentos.
             </p>
-            <div class="row q-col-gutter-lg justify-center justify-md-start">
-              <div class="col-6">
+            <div
+              class="row q-col-gutter-md justify-center justify-md-start q-gutter-x-sm"
+            >
+              <q-card class="col-5 q-pa-sm">
                 <p class="text-subtitle1 text-weight-medium">Atual</p>
                 <p class="text-body2">Desenvolvedor SR / Grupo Lins Ferrão</p>
-              </div>
-              <div class="col-6">
+              </q-card>
+              <q-card class="col-5">
                 <p class="text-subtitle1 text-weight-medium">Atual</p>
-                <p class="text-body2">Professor / Senac</p>
-              </div>
+                <p class="text-body2">Professor TI / Senac</p>
+              </q-card>
               <div class="col-12">
-                <p class="text-subtitle1 text-weight-medium">Localização</p>
+                <p class="text-subtitle1 text-weight-medium">
+                  <q-icon name="place" />Localização
+                </p>
                 <p class="text-body2">Camaquã, Rio Grande do Sul · Brasil</p>
               </div>
             </div>
@@ -70,7 +74,8 @@
             Docência para Ensino Técnico e atualmente pós-graduando em Ciência
             de Dados e Inteligência Artificial (previsão jan/26). <br />
             Trabalho principalmente com Python, Docker e frontend em VueJS.
-            Atualmente atuo no setor de NFs e integrações de estoque com filas.
+            Atualmente atuo no setor de integração de NFs e de estoques
+            integrados com filas.
           </p>
 
           <div class="row q-col-gutter-lg justify-center q-gutter-x-sm">
@@ -86,7 +91,7 @@
               <q-card-section>
                 <q-icon name="analytics" size="36px" color="teal" />
                 <p class="q-mt-sm text-body2">
-                  Pós em docencia ensino tecnico, ciencia de dados e IA
+                  Pós em docencia ensino tecnico, DataScience e IA
                 </p>
               </q-card-section>
             </q-card>
@@ -107,8 +112,8 @@
           </h2>
           <p class="text-body1 text-grey-8 q-mb-xl">
             Inteligência Artificial é uma das áreas mais promissoras para
-            transformar dados em valor. Mesmo que eu ainda não desenvolva
-            soluções comerciais, acredito no impacto que ela pode trazer:
+            transformar dados em valor, tanto para voce quanto sua empresa.
+            Acredito no impacto que ela pode trazer:
           </p>
           <div class="row q-col-gutter-lg justify-center q-gutter-x-sm">
             <q-card class="col-12 col-md-3 card-slide">
@@ -215,78 +220,19 @@
             Linha do Tempo Profissional
           </h2>
           <q-timeline layout="comfortable" color="primary">
-            <q-timeline-entry
-              color="teal"
-              title="Professor - Senac RS"
-              subtitle="abr 2025 - atual"
-            >
-              <q-card flat bordered class="text-grey-8">
-                <q-card-section class="text-body2">
-                  Técnico em informática | Redes | Desenvolvimento Web
-                </q-card-section>
-              </q-card>
-            </q-timeline-entry>
-
-            <q-timeline-entry
-              color="blue"
-              title="Desenvolvedor SR - Grupo Lins Ferrão"
-              subtitle="jan 2024 - atual"
-            >
-              <q-card flat bordered class="text-grey-8">
-                <q-card-section class="text-body2">
-                  Desenvolvimento de integrações, APIs e aplicações web.
-                </q-card-section>
-              </q-card>
-            </q-timeline-entry>
-
-            <q-timeline-entry
-              color="indigo"
-              title="Desenvolvedor Pl - Grupo Lins Ferrão"
-              subtitle="fev 2023 - jan 2025"
-            >
-              <q-card flat bordered class="text-grey-8">
-                <q-card-section class="text-body2">
-                  Projetos em VueJS, APIs Python e banco de dados MySQL.
-                </q-card-section>
-              </q-card>
-            </q-timeline-entry>
-
-            <q-timeline-entry
-              color="purple"
-              title="Desenvolvedor Jr - Grupo Lins Ferrão"
-              subtitle="jul 2021 - mar 2023"
-            >
-              <q-card flat bordered class="text-grey-8">
-                <q-card-section class="text-body2">
-                  Desenvolvimento frontend em VueJS e apoio em APIs
-                  Flask/Django.
-                </q-card-section>
-              </q-card>
-            </q-timeline-entry>
-
-            <q-timeline-entry
-              color="deep-orange"
-              title="Técnico de TI - 3º Batalhão Logístico"
-              subtitle="fev 2018 - jan 2019"
-            >
-              <q-card flat bordered class="text-grey-8">
-                <q-card-section class="text-body2">
-                  Suporte técnico e manutenção de equipamentos.
-                </q-card-section>
-              </q-card>
-            </q-timeline-entry>
-
-            <q-timeline-entry
-              color="red"
-              title="Suporte - RBN Tecnologia"
-              subtitle="nov 2016 - fev 2018"
-            >
-              <q-card flat bordered class="text-grey-8">
-                <q-card-section class="text-body2">
-                  Suporte em TI e manutenção de sistemas para clientes locais.
-                </q-card-section>
-              </q-card>
-            </q-timeline-entry>
+            <section v-for="tempo in linhaTempo" :key="tempo.color">
+              <q-timeline-entry
+                :color="tempo.color"
+                :title="tempo.title"
+                :subtitle="tempo.subtitle"
+              >
+                <q-card flat bordered class="text-grey-8">
+                  <q-card-section class="text-body2">
+                    {{ tempo.subtitle2 }}
+                  </q-card-section>
+                </q-card>
+              </q-timeline-entry>
+            </section>
           </q-timeline>
         </div>
       </section>
@@ -417,7 +363,7 @@
             round
             color="white"
             icon="mdi-github"
-            href="https://github.com/seuusuario"
+            href="https://github.com/leonardohuttner"
             target="_blank"
           />
           <q-btn
@@ -425,7 +371,7 @@
             round
             color="white"
             icon="mdi-linkedin"
-            href="https://linkedin.com/in/seuusuario"
+            href="https://linkedin.com/in/leonardo-huttner"
             target="_blank"
           />
           <q-btn
@@ -433,7 +379,7 @@
             round
             color="white"
             icon="mdi-email"
-            href="mailto:seuemail@gmail.com"
+            href="mailto:contato@leonardohuttner.com.br"
           />
         </div>
       </footer>
@@ -454,6 +400,47 @@ const newsletter = ref({
   name: "",
   email: "",
 });
+
+const linhaTempo = ref([
+  {
+    color: "blue",
+    title: "Desenvolvedor SR - Grupo Lins Ferrão",
+    subtitle: "jan 2024 - atual",
+    subtitle2:
+      "Desenvolvimento de integrações OMNI e CRM, APIs e aplicações web.",
+  },
+  {
+    color: "teal",
+    title: "Professor - Senac RS",
+    subtitle: "abr 2025 - atual",
+    subtitle2: "Técnico em informática | Redes | Desenvolvimento Web",
+  },
+  {
+    color: "indigo",
+    title: "Desenvolvedor Pl - Grupo Lins Ferrão",
+    subtitle: "fev 2023 - dez 2023",
+    subtitle2: "Projetos em VueJS, APIs Python e banco de dados MySQL.",
+  },
+  {
+    color: "purple",
+    title: "Desenvolvedor Jr - Grupo Lins Ferrão",
+    subtitle: "jan 2021 - jan 2023",
+    subtitle2:
+      "Desenvolvimento frontend em VueJS e apoio em APIs Flask/Django.",
+  },
+  {
+    color: "deep-orange",
+    title: "Técnico de TI - 3º Batalhão Logístico",
+    subtitle: "fev 2018 - jan 2019",
+    subtitle2: "Suporte tecnico e manutenção de equipamentos",
+  },
+  {
+    color: "red",
+    title: "Suporte - RBN Tecnologia",
+    subtitle: "nov 2016 - fev 2018",
+    subtitle2: "Suporte em TI e manutenção de sistemas para clientes locais.",
+  },
+]);
 
 const sendMessage = () => {
   console.log("Form enviado:", form.value);
