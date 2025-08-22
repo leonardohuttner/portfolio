@@ -271,7 +271,7 @@
       </section>
 
       <!-- Contato -->
-      <section
+      <!-- <section
         id="contact"
         class="section-slide contact-gradient-inverse flex flex-center"
       >
@@ -327,64 +327,19 @@
             </q-form>
           </q-card>
         </div>
-      </section>
+      </section> -->
 
       <!-- Newsletter -->
       <section
         id="newsletter"
         class="section-slide contact-gradient flex flex-center"
       >
-        <div class="max-w-screen-md q-pa-md text-center">
-          <q-icon
-            name="mdi-newspaper-variant-outline"
-            size="48px"
-            color="primary"
-          />
-          <h2 class="text-h5 text-grey-9 q-mt-md">Newsletter Inteligente</h2>
-          <p class="text-body1 text-grey-7 q-mt-sm">
-            Uma IA lê notícias sobre
-            <b>economia, bitcoin, blockchain e tecnologia</b>, gera um resumo e
-            envia direto para seu email <b>todos os dias às 8h da manhã</b>.
-          </p>
-          <q-form
-            @submit="subscribeNewsletter"
-            class="q-gutter-md q-mt-lg max-w-screen-sm q-mx-auto"
-          >
-            <q-input
-              outlined
-              v-model="newsletter.name"
-              label="Nome"
-              dense
-              clearable
-            >
-              <template v-slot:prepend>
-                <q-icon name="person" color="primary" />
-              </template>
-            </q-input>
-            <q-input
-              outlined
-              v-model="newsletter.email"
-              label="Email"
-              type="email"
-              dense
-              clearable
-            >
-              <template v-slot:prepend>
-                <q-icon name="email" color="primary" />
-              </template>
-            </q-input>
-            <div class="text-center q-mt-md">
-              <q-btn
-                label="Quero Receber"
-                color="primary"
-                type="submit"
-                class="q-px-lg q-py-sm"
-                rounded
-                unelevated
-              />
-            </div>
-          </q-form>
-        </div>
+        <iframe
+          src="https://n8n-oracle.leonardohuttner.com.br/form/contato"
+          frameborder="0"
+          width="100%"
+          height="500px"
+        ></iframe>
       </section>
 
       <!-- Footer -->
