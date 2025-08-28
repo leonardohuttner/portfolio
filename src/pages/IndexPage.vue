@@ -40,10 +40,10 @@
                 <p class="text-body2">Desenvolvedor SR / Grupo Lins Ferrão</p>
               </q-card>
               <q-card class="col-5">
-                <p class="text-subtitle1 text-weight-medium">Atual</p>
-                <p class="text-body2">
-                  Professor TI (Redes, Progração, Hardware) / Senac
+                <p class="text-subtitle1 text-weight-medium text-center">
+                  Atual
                 </p>
+                <p class="text-body2">Professor TI/ Senac</p>
               </q-card>
               <div class="col-12">
                 <p class="text-subtitle1 text-grey-9 text-weight-medium">
@@ -360,7 +360,7 @@
         <q-card>
           <q-card-section class="row items-center justify-between">
             <div class="text-h6">Newsletter</div>
-            <q-btn flat round dense icon="close" v-close-popup />
+            <q-btn flat round dense icon="close" @click="closeNewsletter" />
           </q-card-section>
 
           <q-card-section>
@@ -384,8 +384,16 @@ import { ref, onMounted } from "vue";
 const showNewsletter = ref(false);
 
 onMounted(() => {
-  showNewsletter.value = true;
+  const dismissed = localStorage.getItem("newsletterDismissed");
+  if (!dismissed) {
+    showNewsletter.value = true; // só abre se nunca foi fechado antes
+  }
 });
+
+const closeNewsletter = () => {
+  showNewsletter.value = false;
+  localStorage.setItem("newsletterDismissed", "true");
+};
 
 const linhaTempo = ref([
   {
