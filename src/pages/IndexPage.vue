@@ -41,7 +41,9 @@
               </q-card>
               <q-card class="col-5">
                 <p class="text-subtitle1 text-weight-medium">Atual</p>
-                <p class="text-body2">Professor TI / Senac</p>
+                <p class="text-body2">
+                  Professor TI (Redes, Progração, Hardware) / Senac
+                </p>
               </q-card>
               <div class="col-12">
                 <p class="text-subtitle1 text-grey-9 text-weight-medium">
