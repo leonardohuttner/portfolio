@@ -185,6 +185,30 @@
                   size="36px"
                   color="green"
                 />
+                <h3 class="text-subtitle1 q-mt-md">App de Mercado</h3>
+                <p class="text-body2 text-grey-9">
+                  Controle completo de compras e nfce para saber seus gastos com mercado.
+                  Integrado com scrapping no sefaz para leitura automatica de notas fiscais.
+                  (Andamento - Ja é possivel ser usuario tester)
+                </p>
+              </q-card-section>
+              <q-card-actions align="center">
+                <q-btn
+                  outline
+                  label="Conhecer"
+                  color="green"
+                  @click="openURL('https://app-mercado.leonardohuttner.com.br/')"
+                />
+              </q-card-actions>
+            </q-card>
+
+            <q-card class="col-12 col-md-5 card-slide">
+              <q-card-section>
+                <q-icon
+                  name="account_balance_wallet"
+                  size="36px"
+                  color="green"
+                />
                 <h3 class="text-subtitle1 q-mt-md">App de Finanças</h3>
                 <p class="text-body2 text-grey-9">
                   Controle completo de investimentos, contas, metas, faturas e
@@ -257,10 +281,10 @@
               <q-card-section>
                 <q-icon name="cloud" size="36px" color="blue" />
                 <h3 class="text-subtitle1 q-mt-md">
-                  Over-engineering for study
+                  Aprendizado constante com nuvem própria
                 </h3>
                 <p class="text-body2 text-grey-8">
-                  VPS Oracle com Docker usando N8N, agentes de IA e nuvem
+                  VPS Oracle com Docker usando N8N, agentes de IA em ambiente 
                   própria para estudos.
                 </p>
               </q-card-section>
