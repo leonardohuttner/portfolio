@@ -161,7 +161,7 @@
                 <q-icon name="local_shipping" size="36px" color="primary" />
                 <h3 class="text-subtitle1 q-mt-md">CapivaraTracker</h3>
                 <p class="text-body2 text-grey-9">
-                  Rastreamento de encomendas via API <a href="https://www.siterastreio.com.br/" target="_blank">Rastreamento</a>.
+                  Rastreamento de encomendas via API Rastreio.
                   Como os correios ainda não tinha app e eu gostava de monitorar
                   e validar minhas encomendas surgiu esse projeto, porem hoje ja
                   obsoleto por que a api foi desligada desde o lançamento
@@ -376,6 +376,11 @@
             icon="mdi-email"
             href="mailto:contato@leonardohuttner.com.br"
           />
+        </div>
+        <div class="siterastreio-hidden">
+          <a href="https://www.siterastreio.com.br/" target="_blank">
+            Rastreamento
+          </a>
         </div>
       </footer>
 
@@ -731,5 +736,14 @@ html {
 .card-newsletter {
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.siterastreio-hidden {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 </style>
