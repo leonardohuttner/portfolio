@@ -161,7 +161,7 @@
                 <q-icon name="local_shipping" size="36px" color="primary" />
                 <h3 class="text-subtitle1 q-mt-md">CapivaraTracker</h3>
                 <p class="text-body2 text-grey-9">
-                  Rastreamento de encomendas via API <a href="https://www.siterastreio.com.br/" target="_blank">Rastreio</a>.
+                  Rastreamento de encomendas via API <a href="https://www.siterastreio.com.br/" target="_blank">Rastreamento</a>.
                   Como os correios ainda não tinha app e eu gostava de monitorar
                   e validar minhas encomendas surgiu esse projeto, porem hoje ja
                   obsoleto por que a api foi desligada desde o lançamento
